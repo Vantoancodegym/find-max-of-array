@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tim max of array</title>
+</head>
+<body>
+<input type="text"  id="nhapN" value="nhap n so ngau nhien, ngan cach boi dau (;)">
+<input type="button" onclick="findmax()" value="tim so lon nhat">
+<p id="result"></p>
+<script>
+ function findmax(){
+     let a = document.getElementById("nhapN").value;
+     let myarray = a.split(",").map(Number);
+     let amax = myarray[0];
+     for (let i = 0;i<myarray.length;i++){
+         if (myarray[i]>=amax){
+             amax = myarray[i];
+         }
+     }
+     document.getElementById("result").innerText = "so lon nhat la : " + amax;
+ }
+
+</script>
+
+</body>
+</html>
